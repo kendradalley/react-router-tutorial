@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router'
 import NavLink from './NavLink'
+import { browserHistory} from 'react-router'
 
 export default React.createClass({
 
@@ -9,6 +10,7 @@ export default React.createClass({
     const userName = event.target.elements[0].value
     const repo = event.target.elements[1].value
     const path = '/repos/${userName}/${repo}'
+    browserHistory.push(path)
     console.log(path)
   },
 
