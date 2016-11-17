@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router'
 import NavLink from './NavLink.js'
+import Home from './Home'
 
 
 export default React.createClass({
@@ -12,7 +13,7 @@ export default React.createClass({
         <li><NavLink to="/about">About</NavLink></li>
         <li><NavLink to="/repos">Repos</NavLink></li>
       </ul>
-      {this.props.children}
+      {this.props.children || <Home/>}
       </div>
       )
   }
